@@ -2,6 +2,7 @@ global using soccerPlayersApp.Models;
 global using Microsoft.EntityFrameworkCore;
 using soccerPlayersApp.Data.Interfaces;
 using soccerPlayersApp.Data.Interfaces.Repositories;
+using soccerPlayersApp.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<JuanDevContext>(options=>
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddScoped<IPlayerRepository, PlayerRepository>(); //scope reference to ourt repositories
+builder.Services.AddScoped<ISPRepository, SPRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //handling cors

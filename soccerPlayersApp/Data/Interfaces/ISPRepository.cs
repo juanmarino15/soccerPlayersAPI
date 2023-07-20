@@ -6,6 +6,6 @@ namespace soccerPlayersApp.Data.Interfaces
         Task<List<Player>>GetPlayerList();
         Task<dynamic>GetJoinedPlayerList();
         Task<int> UpdatePlayer(int teamId, int playerId);
-        Task<int> CreatePlayer(int jerseyNumber, string name, int teamId);
+        Task<int> CreatePlayer(int jerseyNumber, string name);
     }
 }
